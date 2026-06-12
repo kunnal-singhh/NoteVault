@@ -14,6 +14,6 @@ export const apiLimiter = rateLimit({
     if (req.user && req.user._id) {
       return req.user._id.toString();
     }
-    return req.ip;
+    return req['ip'];
   },
 });

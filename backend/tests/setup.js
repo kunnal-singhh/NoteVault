@@ -1,13 +1,18 @@
 import mongoose from "mongoose";
+import { MongoMemoryServer } from "mongodb-memory-server";
+
+let mongoServer;
 
 beforeAll(async () => {
-  const url = "mongodb://127.0.0.1/notevault_test";
-  await mongoose.connect(url);
+  mongoServer = await MongoMemoryServer.create();
+  const uri = mongoServer.getUri();
+  await mongoose.connect(uri);
 });
 
 afterAll(async () => {
   await mongoose.connection.dropDatabase();
   await mongoose.connection.close();
+  await mongoServer.stop();
 });
 
 afterEach(async () => {

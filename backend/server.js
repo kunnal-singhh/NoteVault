@@ -20,7 +20,9 @@ app.use(express.json()); // Parse JSON bodies
 app.use(cookieParser()); // Parse cookies
 
 // Connect to Database
-connectDB();
+if (process.env.NODE_ENV !== "test") {
+  connectDB();
+}
 
 // Apply Rate Limiting globally to all /api routes
 app.use("/api", apiLimiter);

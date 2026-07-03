@@ -25,6 +25,12 @@ This project is fully Dockerized for a seamless setup experience.
 
 *(Note: Ensure ports 3000, 5173, and 27017 are free on your machine)*
 
+## Screenshots / Demo
+> **Home page**
+<img width="1917" height="931" alt="image" src="https://github.com/user-attachments/assets/1c0aefbd-1620-4f4d-837a-ef76b34fa3ef" />
+
+---
+
 
 ## Testing
 The backend includes a comprehensive test suite (7 tests) covering the core endpoints.

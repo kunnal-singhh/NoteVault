@@ -42,12 +42,17 @@ app.use((err, req, res, next) => {
 
 const PORT = process.env.PORT || 3000;
 
+// Health Check Route (Required by some cloud providers like Render)
+app.get("/", (req, res) => {
+  res.status(200).send("API is running...");
+});
+
 // Export app for testing purposes
 export default app;
 
 // Only listen if not running in test mode
 if (process.env.NODE_ENV !== "test") {
-  app.listen(PORT, () => {
+  app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on port ${PORT}`);
   });
 }

@@ -25,10 +25,6 @@ This project is fully Dockerized for a seamless setup experience.
 
 *(Note: Ensure ports 3000, 5173, and 27017 are free on your machine)*
 
-## Screenshots / Demo
-> **Loom Video:** [Insert your Loom video link here]
-> 
-> *(Add your application screenshots here before submission)*
 
 ## Testing
 The backend includes a comprehensive test suite (7 tests) covering the core endpoints.
